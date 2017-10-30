@@ -1,8 +1,40 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 :root {
-    --grid-gap: 20px;
+	--grid-gap: 20px;
+	--grid-column: 1 / -1;
+	--rounded-border-radius: 10px;
+}
+
+.container {
+	border-radius: var(--rounded-border-radius);
+	display: grid;
+	grid-gap: var(--grid-gap);
+	grid-template-columns: 7fr 3fr;
+	grid-template-rows: 100px auto 150px; 
+	height: calc(100vh - (var(--grid-gap) * 2));
+	margin: var(--grid-gap);
+
+}
+
+.footer{
+	grid-column: var(--grid-column);
+}
+
+.header {
+	grid-column: var(--grid-column);
+}
+
+.main__content {
+	display: grid;
+	grid-gap: var(--grid-gap);
+
+}
+
+.main__sidebar {
+	display: grid;
+	grid-gap: var(--grid-gap);
 }
